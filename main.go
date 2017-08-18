@@ -21,7 +21,7 @@ const (
 	PROJECT_ID = "around-176905"
 	BT_INSTANCE = "around-post"
 	// Needs to update this URL if you deploy it to cloud.
-	ES_URL = "http://54.68.178.224:9200"
+	ES_URL = "http://34.212.247.233:9200"
 )
 
 
@@ -180,7 +180,7 @@ func handlerPost(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	// TODO (student questions) save Post into BT as well
+
 	tbl := bt_client.Open("post")
 	mut := bigtable.NewMutation()
 	t := bigtable.Now()
